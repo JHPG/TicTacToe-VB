@@ -1,0 +1,10 @@
+obj\Debug\JogoDaVelha.exe
+obj\Debug\JogoDaVelha.xml
+obj\Debug\JogoDaVelha.pdb
+bin\Debug\JogoDaVelha.exe
+bin\Debug\JogoDaVelha.pdb
+bin\Debug\JogoDaVelha.xml
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\JogoDaVelha.frmjogodavelha.resources
+obj\Debug\JogoDaVelha.Resources.resources
+obj\Debug\JogoDaVelha.vbproj.GenerateResource.Cache
