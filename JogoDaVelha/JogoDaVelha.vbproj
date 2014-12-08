@@ -11,7 +11,7 @@
     <RootNamespace>JogoDaVelha</RootNamespace>
     <AssemblyName>JogoDaVelha</AssemblyName>
     <MyType>WindowsForms</MyType>
-    <ApplicationIcon>jdv2.ICO</ApplicationIcon>
+    <ApplicationIcon>jdv.ICO</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -125,7 +125,7 @@
     <None Include="Resources\riscoD2.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="games_config_theme.ico" />
+    <Content Include="jdv.ICO" />
     <Content Include="jdv2.ICO" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />

@@ -19,6 +19,7 @@ Partial Class frmjogodavelha
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmjogodavelha))
         Me.btnlimpar = New System.Windows.Forms.Button
         Me.lblresu = New System.Windows.Forms.Label
@@ -53,6 +54,9 @@ Partial Class frmjogodavelha
         Me.pich12 = New System.Windows.Forms.PictureBox
         Me.ln7 = New System.Windows.Forms.PictureBox
         Me.ln8 = New System.Windows.Forms.PictureBox
+        Me.btnsingle = New System.Windows.Forms.Button
+        Me.timersingle = New System.Windows.Forms.Timer(Me.components)
+        Me.btnimp = New System.Windows.Forms.Button
         CType(Me.ln5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ln6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ln4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -70,7 +74,7 @@ Partial Class frmjogodavelha
         'btnlimpar
         '
         Me.btnlimpar.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnlimpar.Location = New System.Drawing.Point(98, 420)
+        Me.btnlimpar.Location = New System.Drawing.Point(30, 413)
         Me.btnlimpar.Name = "btnlimpar"
         Me.btnlimpar.Size = New System.Drawing.Size(159, 39)
         Me.btnlimpar.TabIndex = 2
@@ -396,11 +400,36 @@ Partial Class frmjogodavelha
         Me.ln8.TabStop = False
         Me.ln8.Visible = False
         '
+        'btnsingle
+        '
+        Me.btnsingle.Location = New System.Drawing.Point(209, 403)
+        Me.btnsingle.Name = "btnsingle"
+        Me.btnsingle.Size = New System.Drawing.Size(85, 58)
+        Me.btnsingle.TabIndex = 33
+        Me.btnsingle.Text = "      Ativar       Single player"
+        Me.btnsingle.UseVisualStyleBackColor = True
+        '
+        'timersingle
+        '
+        Me.timersingle.Enabled = True
+        Me.timersingle.Interval = 1000
+        '
+        'btnimp
+        '
+        Me.btnimp.Location = New System.Drawing.Point(284, 419)
+        Me.btnimp.Name = "btnimp"
+        Me.btnimp.Size = New System.Drawing.Size(114, 27)
+        Me.btnimp.TabIndex = 34
+        Me.btnimp.Text = "Modo impossível"
+        Me.btnimp.UseVisualStyleBackColor = True
+        '
         'frmjogodavelha
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(743, 484)
+        Me.Controls.Add(Me.btnsingle)
+        Me.Controls.Add(Me.btnimp)
         Me.Controls.Add(Me.lblvez)
         Me.Controls.Add(Me.ln5)
         Me.Controls.Add(Me.ln6)
@@ -487,5 +516,8 @@ Partial Class frmjogodavelha
     Friend WithEvents ln5 As System.Windows.Forms.PictureBox
     Friend WithEvents ln7 As System.Windows.Forms.PictureBox
     Friend WithEvents ln8 As System.Windows.Forms.PictureBox
+    Friend WithEvents btnsingle As System.Windows.Forms.Button
+    Public WithEvents timersingle As System.Windows.Forms.Timer
+    Friend WithEvents btnimp As System.Windows.Forms.Button
 
 End Class

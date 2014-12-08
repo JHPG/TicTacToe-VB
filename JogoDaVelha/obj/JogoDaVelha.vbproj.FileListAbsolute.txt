@@ -22,3 +22,11 @@ I:\2TA\EXTRAS\Jogo_da_velha-VB\JogoDaVelha\JogoDaVelha\obj\Debug\JogoDaVelha.frm
 I:\2TA\EXTRAS\Jogo_da_velha-VB\JogoDaVelha_desenv\JogoDaVelha\obj\Debug\JogoDaVelha.exe
 I:\2TA\EXTRAS\Jogo_da_velha-VB\JogoDaVelha_desenv\JogoDaVelha\obj\Debug\JogoDaVelha.xml
 I:\2TA\EXTRAS\Jogo_da_velha-VB\JogoDaVelha_desenv\JogoDaVelha\obj\Debug\JogoDaVelha.pdb
+I:\2TA\EXTRAS\Jogo_da_velha-VB\JogoDaVelha_desenv\JogoDaVelha\bin\Debug\JogoDaVelha.exe
+I:\2TA\EXTRAS\Jogo_da_velha-VB\JogoDaVelha_desenv\JogoDaVelha\bin\Debug\JogoDaVelha.pdb
+I:\2TA\EXTRAS\Jogo_da_velha-VB\JogoDaVelha_desenv\JogoDaVelha\bin\Debug\JogoDaVelha.xml
+I:\2TA\EXTRAS\Jogo_da_velha-VB\JogoDaVelha_desenv\JogoDaVelha\obj\Debug\ResolveAssemblyReference.cache
+I:\2TA\EXTRAS\Jogo_da_velha-VB\JogoDaVelha_desenv\JogoDaVelha\obj\Debug\JogoDaVelha.frmjogodavelha.resources
+I:\2TA\EXTRAS\Jogo_da_velha-VB\JogoDaVelha_desenv\JogoDaVelha\obj\Debug\JogoDaVelha.frmsingleoumulti.resources
+I:\2TA\EXTRAS\Jogo_da_velha-VB\JogoDaVelha_desenv\JogoDaVelha\obj\Debug\JogoDaVelha.Resources.resources
+I:\2TA\EXTRAS\Jogo_da_velha-VB\JogoDaVelha_desenv\JogoDaVelha\obj\Debug\JogoDaVelha.vbproj.GenerateResource.Cache

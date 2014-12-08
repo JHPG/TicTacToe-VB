@@ -6,6 +6,12 @@ Public Class frmjogodavelha
     Private resuH As Boolean
     Private resuD As Boolean
     Private term As Boolean
+    Private IOsingle As Boolean
+    Private numbtn As Integer
+    Private numjogada As Integer
+    Private btnjogada As Integer
+    Private numbtnfinal As Integer
+    Private imp As Boolean
 
     Private Sub frmjogodavelha_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         ox = True
@@ -19,9 +25,10 @@ Public Class frmjogodavelha
         btn8.Text = Nothing
         btn9.Text = Nothing
         term = True
+        IOsingle = False
     End Sub
 
-    Private Sub btnlimpar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnlimpar.Click
+    Private Sub limpar()
         btn2.Text = Nothing
         btn1.Text = Nothing
         btn3.Text = Nothing
@@ -41,6 +48,7 @@ Public Class frmjogodavelha
         ln7.Visible = False
         ln8.Visible = False
         term = True
+        numjogada = 0
     End Sub
 
     Private Sub oxsub()
@@ -56,10 +64,13 @@ Public Class frmjogodavelha
             End If
             If ox = True Then
                 lblvez.Text = "Vez do X"
-            Else
+            ElseIf ox = False Then
                 lblvez.Text = "Vez do O"
             End If
         End If
+        numjogada = numjogada + 1
+        'singleplayer()
+
 
         '    'Verifica as Horizontais:
         '    IIf((btn1.Text = btn2.Text And btn2.Text = btn3.Text), ln1.Visible = True, ln1.Visible = False)
@@ -80,11 +91,49 @@ Public Class frmjogodavelha
         '    IIf((ln7.Visible = True Or ln8.Visible = True), resuD = True, resuD = False)
     End Sub
 
+    Private Sub singleplayer()
+        If IOsingle = True Then
+            If ox = False Then
+                oxvar = "0"
+                ox = True
+            ElseIf ox = True Then
+                oxvar = "X"
+                ox = False
+            End If
+            Randomize()
+            numbtnfinal = Int((4 - 1 + 1) * Rnd() + 1)
+            'timersingle.Enabled = True
+
+
+            ' --- imp ---
+            If imp = True Then
+                btn5.Text = oxvar
+                '  -- para idiotas (imp) --
+                If numjogada = 1 And (numbtn = 2 Or numbtn = 4 Or numbtn = 6 Or numbtn = 8) Then
+
+
+                End If
+            End If
+
+
+
+
+
+
+
+
+        End If
+    End Sub
+
     Private Sub termsub()
         lblresu.Text = "__ " + oxvar + " vence __."
         MsgBox("       __ " + oxvar + " vence. __       ")
         term = False
         lblvez.Text = Nothing
+    End Sub
+
+    Private Sub btnlimpar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnlimpar.Click
+        limpar()
     End Sub
 
     Private Sub btn1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn1.Click
@@ -103,6 +152,8 @@ Public Class frmjogodavelha
                 termsub()
             End If
         End If
+        numbtn = 1
+        singleplayer()
     End Sub
 
     Private Sub btn2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn2.Click
@@ -111,11 +162,14 @@ Public Class frmjogodavelha
         btn2.Text = oxvar
         If (btn3.Text = btn1.Text And btn3.Text = btn2.Text) Then
             ln1.Visible = True
+
             termsub()
         ElseIf (btn2.Text = btn5.Text And btn2.Text = btn8.Text) Then
             ln5.Visible = True
             termsub()
         End If
+        numbtn = 2
+        singleplayer()
     End Sub
 
     Private Sub btn3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn3.Click
@@ -132,6 +186,8 @@ Public Class frmjogodavelha
             ln8.Visible = True
             termsub()
         End If
+        numbtn = 3
+        singleplayer()
     End Sub
 
     Private Sub btn4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn4.Click
@@ -145,6 +201,8 @@ Public Class frmjogodavelha
             ln4.Visible = True
             termsub()
         End If
+        numbtn = 4
+        singleplayer()
     End Sub
 
     Private Sub btn5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn5.Click
@@ -164,6 +222,8 @@ Public Class frmjogodavelha
             ln7.Visible = True
             termsub()
         End If
+        numbtn = 5
+        singleplayer()
     End Sub
 
     Private Sub btn6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn6.Click
@@ -177,6 +237,8 @@ Public Class frmjogodavelha
             ln6.Visible = True
             termsub()
         End If
+        numbtn = 6
+        singleplayer()
     End Sub
 
     Private Sub btn7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn7.Click
@@ -193,6 +255,8 @@ Public Class frmjogodavelha
             ln8.Visible = True
             termsub()
         End If
+        numbtn = 7
+        singleplayer()
     End Sub
 
     Private Sub btn8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn8.Click
@@ -206,6 +270,8 @@ Public Class frmjogodavelha
             ln5.Visible = True
             termsub()
         End If
+        numbtn = 8
+        singleplayer()
     End Sub
 
     Private Sub btn9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn9.Click
@@ -222,5 +288,29 @@ Public Class frmjogodavelha
             ln7.Visible = True
             termsub()
         End If
+        numbtn = 9
+        singleplayer()
+    End Sub
+
+    Private Sub btnsingleeimp()
+        If IOsingle = False Then
+            IOsingle = True
+            limpar()
+            btnsingle.Text = "Desativar Single player"
+        ElseIf IOsingle = True Then
+            IOsingle = False
+            limpar()
+            btnsingle.Text = "Ativar Single player"
+        End If
+        imp = False
+    End Sub
+
+    Private Sub btnsingle_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnsingle.Click
+        btnsingleeimp()
+    End Sub
+
+    Private Sub btnimp_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnimp.Click
+        btnsingleeimp()
+        imp = True
     End Sub
 End Class
